@@ -1,0 +1,48 @@
+NOTICE — python-libnest2d
+==========================
+
+This software is an unofficial distribution of Python bindings for libnest2d.
+It is NOT an official Ultimaker product.
+
+Copyright Notices
+-----------------
+
+pynest2d (Python bindings, SIP definitions)
+  Copyright (C) 2020-2022 Ultimaker B.V.
+  License: LGPL-3.0-or-later
+  Source: https://github.com/Ultimaker/pynest2d
+
+libnest2d (C++ nesting library)
+  Copyright (C) 2017-2022 Tamás Mészáros
+  License: LGPL-3.0-or-later
+  Source: https://github.com/tamasmeszaros/libnest2d
+
+pybind11 (C++ / Python bindings)
+  Copyright (C) 2015-2024 Wenzel Jakob and contributors
+  License: BSD-3-Clause
+  Source: https://github.com/pybind/pybind11
+
+Clipper (polygon clipping library)
+  Copyright (C) 2010-2014 Angus Johnson
+  License: BSL-1.0 (Boost Software License)
+  Source: http://www.angusj.com/delphi/clipper.php
+
+Boost (C++ libraries, Geometry module)
+  Copyright (C) various authors
+  License: BSL-1.0 (Boost Software License)
+  Source: https://www.boost.org
+
+NLopt (nonlinear optimization library)
+  Copyright (C) 2007-2023 Steven G. Johnson and contributors
+  License: LGPL-2.1-or-later (and MIT for some parts)
+  Source: https://github.com/stevengj/nlopt
+
+Redistribution
+--------------
+This package is distributed under the GNU Lesser General Public License v3.0
+(LGPL-3.0). See LICENSE for the full license text.
+
+The LGPL-3.0 incorporates by reference the GNU General Public License v3.0
+(GPL-3.0). A copy is included as COPYING.GPL3.
+
+Source code is available at: https://github.com/HamzaYslmn/python-libnest2d

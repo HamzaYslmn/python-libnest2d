@@ -62,4 +62,4 @@ pip install .
 
 **This is NOT an official Ultimaker product.** For the official version, see [Ultimaker/pynest2d](https://github.com/Ultimaker/pynest2d).
 
-Source code: https://github.com/Ultimaker/pynest2d
+Source code: https://github.com/HamzaYslmn/python-libnest2d

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.12"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "python-libnest2d"
+version = "0.1.1"
+description = "Unofficial Python bindings for libnest2d — 2D bin packing / polygon nesting"
+readme = "README.pypi.md"
+license = "LGPL-3.0-or-later"
+requires-python = ">=3.8"
+authors = [
+    { name = "Ultimaker B.V. (original pynest2d)", email = "plugins@ultimaker.com" },
+]
+maintainers = [
+    { name = "HamzaYslmn" },
+]
+keywords = ["nesting", "bin-packing", "2d", "polygon", "cnc", "laser-cutting"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Manufacturing",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Homepage = "https://github.com/HamzaYslmn/python-libnest2d"
+Repository = "https://github.com/HamzaYslmn/python-libnest2d"
+"Upstream (Ultimaker)" = "https://github.com/Ultimaker/pynest2d"
+"libnest2d" = "https://github.com/tamasmeszaros/libnest2d"
+
+[tool.scikit-build]
+cmake.version = ">=3.20"
+cmake.build-type = "Release"
+cmake.args = ["-Wno-dev"]
+wheel.packages = []
+
+[tool.scikit-build.cmake.define]
+FETCHCONTENT_QUIET = "OFF"
+
+[tool.cibuildwheel]
+build = ["cp39-*", "cp310-*", "cp311-*", "cp312-*", "cp313-*"]
+skip = ["*-musllinux*", "*-win32", "*-manylinux_i686"]
+
+[tool.cibuildwheel.linux]
+before-all = "yum install -y boost-devel || apt-get install -y libboost-dev"
+
+[tool.cibuildwheel.windows]
+before-build = "pip install delvewheel"
+environment = { BOOST_ROOT = "C:/local/boost" }
