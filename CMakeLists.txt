@@ -109,3 +109,4 @@ elseif(Boost_INCLUDE_DIRS)
 endif()
 
 install(TARGETS pynest2d DESTINATION .)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/pynest2d.pyi DESTINATION .)
